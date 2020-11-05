@@ -1,11 +1,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import {View, Button, FlatList, Text, ScrollView} from 'react-native';
-import {enableScreens} from 'react-native-screens';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-
-enableScreens();
 
 export const HomeScreen = ({navigation}) => (
   // <ScrollView style={{backgroundColor: 'red', flex: 1}}>
@@ -19,7 +16,7 @@ export const HomeScreen = ({navigation}) => (
   <FlatList
     data={DATA}
     renderItem={({item}) => <Item title={item.title} />}
-    keyExtractor={item => item.id}
+    keyExtractor={(item) => item.id}
   />
   // </ScrollView>
 );
@@ -37,7 +34,7 @@ export const DetailsScreen = ({navigation}) => (
       inverted
       data={DATA}
       renderItem={({item}) => <Item title={item.title} />}
-      keyExtractor={item => item.id}
+      keyExtractor={(item) => item.id}
     />
   </View>
 );

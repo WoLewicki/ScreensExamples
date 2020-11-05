@@ -6,7 +6,7 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 
-// enableScreens(false);
+//
 
 const Screen2 = () => {
   const navigation = useNavigation();

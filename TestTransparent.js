@@ -4,10 +4,6 @@ import {Text, View, StyleSheet, Button} from 'react-native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {enableScreens} from 'react-native-screens';
-
-enableScreens();
-
 const ScreenInTransparentModal = ({navigation}) => {
   return (
     <View style={styles.container}>

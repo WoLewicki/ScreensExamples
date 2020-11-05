@@ -10,11 +10,11 @@ function HomeScreen({navigation}) {
   return (
     <>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={{height: 100, width: 100, backgroundColor: 'red'}}></View>
+        <View style={{height: 100, width: 100, backgroundColor: 'red'}} />
       </ScrollView>
     </>
   );
-};
+}
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();

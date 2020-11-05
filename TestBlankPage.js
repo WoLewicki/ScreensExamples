@@ -7,15 +7,13 @@
  */
 
 import * as React from 'react';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {StyleSheet, View, Button} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
-enableScreens();
 
 const Page = ({navigation, route}) => {
   React.useEffect(() => {

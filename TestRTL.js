@@ -3,8 +3,6 @@ import React from 'react';
 import {ScrollView, View, Button, Platform, Text} from 'react-native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
-import {enableScreens} from 'react-native-screens';
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 const NestedStack = createNativeStackNavigator();

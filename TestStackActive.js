@@ -7,9 +7,6 @@ import {
   createStackNavigator,
   CardStyleInterpolators,
 } from '@react-navigation/stack';
-import {enableScreens} from 'react-native-screens';
-
-enableScreens();
 
 const RootStack = createStackNavigator();
 const PrimaryStack = createStackNavigator();

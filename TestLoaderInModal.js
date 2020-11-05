@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import {enableScreens} from 'react-native-screens';
+
 import * as React from 'react';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
@@ -19,8 +19,6 @@ import A from 'react-native-reanimated';
 import {withTransition} from 'react-native-redash';
 
 import {TouchableOpacity} from 'react-native-gesture-handler';
-
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 

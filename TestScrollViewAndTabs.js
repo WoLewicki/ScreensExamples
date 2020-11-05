@@ -69,10 +69,7 @@ export default function wut() {
           statusBarAnimation: 'none',
         }}>
         <Stack.Screen name="TabNavigator" component={HomeScreen} />
-        <Stack.Screen
-          name="TabNavigator1"
-          component={TabNavigator}
-        />
+        <Stack.Screen name="TabNavigator1" component={TabNavigator} />
         <Stack.Screen
           name="Home1"
           component={HomeScreen}

@@ -22,15 +22,17 @@ const Stack2 = createNativeStackNavigator();
 const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 const Screen1 = () => {
-  return (
-    <View />
-  );
+  return <View />;
 };
 
 const Tab1 = () => {
   return (
     <Stack2.Navigator>
-      <Stack2.Screen name={'Screen 1'} component={Screen1} options={{headerShown: false}}/>
+      <Stack2.Screen
+        name={'Screen 1'}
+        component={Screen1}
+        options={{headerShown: false}}
+      />
     </Stack2.Navigator>
   );
 };

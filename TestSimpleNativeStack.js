@@ -9,10 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {enableScreens} from 'react-native-screens';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 
@@ -48,7 +45,8 @@ function First({navigation}) {
           <Text style={styles.buttonText}>Tap me for second screen</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.centeredContainer}>
+      <View //style={styles.centeredContainer}
+      >
         <Text>Hi I'm the SECOND screen</Text>
         <TextInput
           placeholder={'Password'}
@@ -163,11 +161,7 @@ const ListScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <FlatList
-        ref={ref}
-        data={data}
-        renderItem={renderItem}
-      />
+      <FlatList ref={ref} data={data} renderItem={renderItem} />
     </View>
   );
 };

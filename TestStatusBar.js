@@ -5,8 +5,6 @@ import {ScrollView, StyleSheet, Text, View, Button} from 'react-native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {enableScreens} from 'react-native-screens';
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 

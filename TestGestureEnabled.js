@@ -8,15 +8,13 @@
 
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {enableScreens} from 'react-native-screens';
+
 import {createAppContainer} from 'react-navigation';
 // import {createStackNavigator} from 'react-navigation-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 // import createNativeStackNavigator from 'react-native-screens/createNativeStackNavigator';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-
-enableScreens();
 
 class HomeScreen extends React.Component {
   render() {

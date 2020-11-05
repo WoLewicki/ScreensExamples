@@ -21,10 +21,10 @@ export const HomeScreen = ({navigation}) => {
     //   contentOffset={{
     //     y: 100,
     //   }}>
-      <Button
-        title="TabNavigator"
-        onPress={() => navigation.navigate('TabNavigator')}
-      />
+    <Button
+      title="TabNavigator"
+      onPress={() => navigation.navigate('TabNavigator')}
+    />
     // </ScrollView>
   );
 };

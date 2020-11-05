@@ -10,9 +10,6 @@ import {
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import createNativeStackNavigator from 'react-native-screens/createNativeStackNavigator';
-import {enableScreens} from 'react-native-screens';
-
-enableScreens();
 
 const ListScreen = ({navigation}) => {
   const data = Array.from({length: 100}).map((_, i) => ({text: String(i)}));

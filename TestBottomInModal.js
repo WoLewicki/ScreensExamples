@@ -2,12 +2,9 @@ import * as React from 'react';
 import {Text, View, StyleSheet, Button} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {enableScreens} from 'react-native-screens';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-
-enableScreens();
 
 const Tab = createBottomTabNavigator();
 

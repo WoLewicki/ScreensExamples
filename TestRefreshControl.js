@@ -8,11 +8,9 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-
-enableScreens();
 
 function wait(timeout) {
   return new Promise((resolve) => {

@@ -13,8 +13,7 @@ import {
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {enableScreens, getHeaderHeight} from 'react-native-screens';
-enableScreens();
+import {getHeaderHeight} from 'react-native-screens';
 
 const Stack = createNativeStackNavigator();
 

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {View, Text, TouchableOpacity, PlatformColor} from 'react-native';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {AppearanceProvider, useColorScheme} from 'react-native-appearance';
 import {
@@ -10,8 +10,6 @@ import {
   DefaultTheme,
   DarkTheme,
 } from '@react-navigation/native';
-
-enableScreens();
 
 const ModalStack = createNativeStackNavigator();
 
@@ -57,7 +55,9 @@ export default function App() {
     <AppearanceProvider>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeNavigator} //options={{headerStyle: {backgroundColor: PlatformColor('systemBackgroundColor')}}}
+          <Stack.Screen
+            name="Home"
+            component={HomeNavigator} //options={{headerStyle: {backgroundColor: PlatformColor('systemBackgroundColor')}}}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,12 +1,10 @@
 import * as React from 'react';
 import {Button, ScrollView, TouchableOpacity, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {enableScreens} from 'react-native-screens';
+
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-
-enableScreens();
 
 function First({navigation}) {
   return (

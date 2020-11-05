@@ -8,11 +8,9 @@ import {
   FlatList,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

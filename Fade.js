@@ -11,7 +11,7 @@ interface FadeProps {
   duration?: number;
 }
 
-export const Fade: FunctionComponent<FadeProps> = props => {
+export const Fade: FunctionComponent<FadeProps> = (props) => {
   const {style, children, direction = 'down', duration, ...rest} = props;
   const [visibility] = useState(new Animated.Value(0));
   const [visible, setVisible] = useState(props.visible);

@@ -1,10 +1,8 @@
 import * as React from 'react';
 import {Button, ScrollView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {enableScreens} from 'react-native-screens';
-import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 
-enableScreens();
+import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 
 const NativeStack = createNativeStackNavigator();
 

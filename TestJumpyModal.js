@@ -12,9 +12,6 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Text, TouchableWithoutFeedback, View} from 'react-native';
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
-import {enableScreens} from 'react-native-screens';
-
-enableScreens();
 
 const App = () => {
   return (

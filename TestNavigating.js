@@ -7,14 +7,12 @@ import {
   StyleProp,
   Button,
 } from 'react-native';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {useSafeArea, SafeAreaProvider} from 'react-native-safe-area-context';
-
-enableScreens();
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();

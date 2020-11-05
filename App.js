@@ -39,16 +39,10 @@ import TestSimpleNativeStack from './TestSimpleNativeStack';
 // import TestSearchBar from './TestSearchBar';
 // import TestAuth from './TestAuth';
 // import TestModalInBottom from './TestModalInBottom';
+import TestNoNavigation from './TestNoNavigation';
 
-import {enableScreens} from 'react-native-screens';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-
-enableScreens();
+// enableScreens(true);
 
 export default () => {
-  return (
-    <SafeAreaProvider>
-      <TestSimpleStack />
-    </SafeAreaProvider>
-  );
+  return <TestSimpleStack />;
 };

@@ -13,10 +13,10 @@ import {
 } from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {enableScreens} from 'react-native-screens';
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 
-// enableScreens();
+//
 
 function First({navigation}) {
   const NestedStack = createBottomTabNavigator();

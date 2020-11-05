@@ -29,7 +29,7 @@ export class Stack extends Component {
     super(props);
 
     this.state = {
-      stack: ['azure'],
+      stack: ['pink'],
       transitioning: 0,
     };
   }
@@ -63,46 +63,15 @@ export class Stack extends Component {
         style={style}
         key={key}
         stackAnimation="fade"
-        active={1}
+        active={active ? 1 : 0}
         onDismissed={() => this.removeByKey(key)}>
-        {/* <ScreenStackHeaderConfig title={key} translucent={false} largeTitle>
-          {index === 0 && (
-            <ScreenStackHeaderLeftView>
-              <TouchableHighlight onPress={() => alert('sdf')}>
-                <Image
-                  source={{
-                    uri:
-                      'https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                  }}
-                  style={{ width: 30, height: 30 }}
-                />
-              </TouchableHighlight>
-            </ScreenStackHeaderLeftView>
-          )}
-          <ScreenStackHeaderRightView>
-            <View style={{width: 20, height: 20, backgroundColor: 'green'}} />
-          </ScreenStackHeaderRightView>
-          <ScreenStackHeaderCenterView>
-            <View
-              style={{
-                width: 20,
-                height: 20,
-                backgroundColor: 'plum',
-                borderWidth: 1,
-                borderColor: 'red',
-              }}
-            />
-          </ScreenStackHeaderCenterView>
-        </ScreenStackHeaderConfig> */}
         {this.props.renderScreen(key)}
       </Screen>
     );
   };
   render() {
     const screens = this.state.stack.map(this.renderScreen);
-    return (
-      <ScreenContainer style={styles.container}>{screens}</ScreenContainer>
-    );
+    return <View style={styles.container}>{screens}</View>;
   }
 }
 
@@ -111,35 +80,42 @@ class App extends Component {
     const index = COLORS.indexOf(key);
     const color = key;
     const pop = index > 0 ? () => this.stack.pop() : null;
-    const push = index < 2 ? () => this.stack.push(COLORS[index + 1]) : null;
+    const push = index < 2 ? () => this.stack.push(COLORS[index + 2]) : null;
     const remove = index > 1 ? () => this.stack.remove(1) : null;
     return (
-      <SafeAreaView>
+      <View style={styles.verticalContainer}>
+        <View style={styles.centeredContainer}>
+          <TouchableOpacity
+            style={[styles.centeredContainer, styles.buttonExtras]}
+            onPress={() => navigation.navigate('Second')}>
+            <Text style={styles.buttonText}>Tap me for second screen</Text>
+          </TouchableOpacity>
+        </View>
+        <View //style={styles.centeredContainer}
+        >
+          <Text>Hi I'm the SECOND screen</Text>
           <TextInput
-            style={{fontSize: 20}}
-            autoCompleteType={'username'}
-            importantForAutofill={'yes'}
-            placeholder={'Username'}
-          />
-          <TextInput
-            style={{fontSize: 20}}
-            autoCompleteType={'password'}
-            importantForAutofill={'yes'}
             placeholder={'Password'}
+            autoCompleteType={'password'}
             secureTextEntry={true}
           />
+        </View>
+        <View style={styles.centeredContainer}>
           <TouchableOpacity
-            onPress={() => push('pink')}
-            style={{
-              height: 60,
-              backgroundColor: 'red',
-              width: '100%',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Text>LOGIN</Text>
+            style={[styles.centeredContainer, styles.buttonExtras]}
+            onPress={() => navigation.popToTop()}>
+            <Text style={styles.buttonText}>Pop to top</Text>
           </TouchableOpacity>
-      </SafeAreaView>
+        </View>
+        <View style={styles.flexOne} />
+        <View style={styles.flexOne}>
+          <TouchableOpacity
+            style={[styles.centeredContainer, styles.buttonExtras]}
+            onPress={() => navigation.navigate('Second')}>
+            <Text style={styles.buttonText}>Tap me for second screen</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     );
   };
   render() {
@@ -166,6 +142,28 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     alignSelf: 'stretch',
     borderColor: 'black',
+  },
+  verticalContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'pink',
+  },
+  centeredContainer: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  flexOne: {
+    flex: 1,
+  },
+  buttonExtras: {
+    backgroundColor: '#3A8EED',
+    borderRadius: 20,
+    margin: 20,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
 
