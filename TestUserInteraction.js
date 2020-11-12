@@ -199,6 +199,7 @@ export default function App() {
           cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS,
           headerStyle: {backgroundColor: 'red'},
           gestureEnabled: true,
+          // cardOverlayEnabled: true,
         }}>
         <Stack.Screen name="First" component={First} />
         <Stack.Screen name="Second" component={SecondScreen} />

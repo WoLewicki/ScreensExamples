@@ -1,11 +1,13 @@
 import React from 'react';
-// import Test2 from './Test2';
+import {enableScreens} from 'react-native-screens';
+
+import Test2 from './Test2';
 // import TestTabNav from './TestTabNav';
 // import TestGestureEnabled from './TestGestureEnabled';
 // import TestPolish from './TestPolish';
 // import TestNavigating from './TestNavigating';
 // import TestBlinking from './TestBlinking';
-// import TestUserInteraction from './TestUserInteraction';
+import TestUserInteraction from './TestUserInteraction';
 // import TestBackButton from './TestBackButton';
 // import TestBlankPage from './TestBlankPage';
 // import TestJumpyHeader from './TestJumpyHeader';
@@ -22,7 +24,7 @@ import TestPureScreens from './TestPureScreens';
 // import TestInverted from './TestInverted';
 // import TestFromGH from './TestFromGH';
 // import TestInset from './TestInset';
-// import TestSimpleModal from './TestSimpleModal';
+import TestSimpleModal from './TestSimpleModal';
 // import TestCustomAnimation from './TestCustomAnimation';
 // import TestBottomInModal from './TestBottomInModal';
 // import TestRNModal from './TestRNModal';
@@ -40,9 +42,10 @@ import TestSimpleNativeStack from './TestSimpleNativeStack';
 // import TestAuth from './TestAuth';
 // import TestModalInBottom from './TestModalInBottom';
 import TestNoNavigation from './TestNoNavigation';
+import TestNativeStack from './TestNativeStack';
 
-// enableScreens(true);
+enableScreens();
 
 export default () => {
-  return <TestSimpleStack />;
+  return <TestUserInteraction />;
 };

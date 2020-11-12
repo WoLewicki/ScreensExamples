@@ -40,7 +40,9 @@ export default function NativeNavigation() {
             <View style={{width: 21, height: 20, backgroundColor: 'blue'}} />
           ),
           headerRight: () => (
-            <View style={{width: 20, height: 20, backgroundColor: 'blue'}} />
+            <View style={{marginRight: -20, backgroundColor: 'red'}}>
+              <Button title="Clsssick" onPress={() => console.log('fds')} />
+            </View>
           ),
         }}>
         <Stack.Screen
@@ -48,7 +50,6 @@ export default function NativeNavigation() {
           component={Home}
           options={{
             headerLargeTitle: true,
-            statusBarStyle: 'light-content',
             statusBarHidden: false,
 
             // headerLargeStyle: {
@@ -63,7 +64,6 @@ export default function NativeNavigation() {
           name="Profile"
           component={Profile}
           options={{
-            statusBarStyle: 'light-content',
             statusBarHidden: true,
             // headerLargeTitle: true,
             // headerHideShadow: true,
@@ -87,7 +87,6 @@ export default function NativeNavigation() {
 }
 
 function Home({navigation}) {
-  const [yes, setYes] = React.useState(true);
   return (
     <ScrollView
       style={{backgroundColor: 'yellow'}}
@@ -97,17 +96,6 @@ function Home({navigation}) {
         title="Profile"
         onPress={() => {
           navigation.navigate('Profile');
-        }}
-      />
-      <Button
-        title="status bar style"
-        onPress={() => {
-          navigation.setOptions({
-            statusBarStyle:
-              Math.random() > 0.5 ? 'light-content' : 'dark-content',
-            statusBarHidden: yes,
-          });
-          setYes(!yes);
         }}
       />
     </ScrollView>

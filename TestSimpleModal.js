@@ -1,10 +1,25 @@
 import * as React from 'react';
-import {Button, ScrollView, TouchableOpacity, Text} from 'react-native';
+import {Button, ScrollView, TouchableOpacity, Text, Alert} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
+
+const createTwoButtonAlert = () =>
+  Alert.alert(
+    'Alert Title',
+    'My Alert Msg',
+    [
+      {
+        text: 'Cancel',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ],
+    {cancelable: false},
+  );
 
 function First({navigation}) {
   return (
@@ -15,22 +30,21 @@ function First({navigation}) {
         title="Go To Second"
         onPress={() => navigation.navigate('Second')}
       />
+      <Button title="2-Button Alert" onPress={createTwoButtonAlert} />
     </ScrollView>
   );
 }
 
 function Second({navigation}) {
   const someContent = Array.from({length: 50}, (v, i) => i);
-  console.warn('Modal');
+
   return (
     <ScrollView
       contentInsetAdjustmentBehavior="automatic"
       scrollToOverflowEnabled
       stickyHeaderIndices={[0, 5]}>
       {someContent.map((x) => (
-        <TouchableOpacity key={x}>
-          <Text>Scroll to {x}</Text>
-        </TouchableOpacity>
+        <Button title="2-Button Alert" onPress={createTwoButtonAlert} />
       ))}
     </ScrollView>
   );
